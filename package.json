@@ -1,0 +1,21 @@
+{
+  "name": "github-action-kss",
+  "version": "1.0.0",
+  "description": "Github action kss",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "migration:make": "NODE_ENV=dev knex --migrations-directory db/migrations migrate:make",
+    "rollback": "NODE_ENV=dev knex migrate:rollback --knexfile db/knexfile.js",
+    "migrate": "NODE_ENV=dev knex migrate:latest --knexfile db/knexfile.js"
+  },
+  "author": "swastikapradhan1@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "knex": "^3.1.0",
+    "knex-stringcase": "^1.4.6",
+    "mssql": "^10.0.2",
+    "pg": "^8.11.5"
+  }
+}
